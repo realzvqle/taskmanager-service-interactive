@@ -1,0 +1,5 @@
+all:
+	cl /c src/main.c 
+	link main.obj advapi32.lib kernel32.lib user32.lib /entry:_entry /OUT:minwinver.exe /subsystem:windows
+	del *.obj
+	tasksc.exe
